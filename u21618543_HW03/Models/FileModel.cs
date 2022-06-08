@@ -5,7 +5,7 @@ using System.Web;
 
 namespace u21618543_HW03.Models
 {
-    public class HomeModel
+    public class FileModel
     {
         public String Option { get; set; }
 
