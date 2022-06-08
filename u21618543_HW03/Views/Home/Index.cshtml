@@ -19,6 +19,45 @@
 
         <div class="col-md-4">
             <h3>Option Selection</h3>
+            <div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionselect" value="Document" />
+                        Document
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionselect" value="Image" />
+                        Image
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionselect" value="Video"/>
+                        Video
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="well-sm">
+                <div class="form-horizontal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+                    {
+                        <div><input type="file" name="files" /></div>
+                        <br />
+                        <div><input type="submit" value="Upload" /></div>
+                    }
+                </div>
+                <br />
+            </div>
+
+
 
 
         </div>
