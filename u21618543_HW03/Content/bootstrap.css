@@ -6621,6 +6621,10 @@ button.close {
 .affix {
   position: fixed;
 }
+
+.table thead{
+    background-color: rgba(0, 0, 0, 0.075);
+}
 @-ms-viewport {
   width: device-width;
 }

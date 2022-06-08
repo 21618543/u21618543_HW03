@@ -21,6 +21,20 @@ namespace u21618543_HW03.Controllers
             return View();
         }
 
+
+        public ActionResult Images()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult Videos()
+        {
+
+
+            return View();
+        }
         public ActionResult Contact()
         {
 
