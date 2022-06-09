@@ -180,6 +180,7 @@
     <Folder Include="App_Data\Uploads\" />
     <Folder Include="Media\Documents\" />
     <Folder Include="Media\Videos\" />
+    <Folder Include="Views\Download\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

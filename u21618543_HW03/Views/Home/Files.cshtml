@@ -1,42 +1,52 @@
-﻿@{
+﻿@using u21618543_HW03.Models;
+@model List<FileModel>
+
+@{
     ViewBag.Title = "Files";
 }
+
+
+
 <h2>Files</h2>
 <h3>Below are the files that have been uploaded thus far:</h3>
 
-<div class="table-bordered">
 
 
-    <table class="table" style="width:100% ">
-        <thead>
-        <tr>
-            <th>File Name</th>
-            <th>Download Option</th>
-            <th>Delete Option</th>
+<div style="height: 400px; overflow: auto;">
+    <div class="well-sm">
+        <table class="table table-condensed table-hover">
+            <thead style="position: sticky;top: 0">
+                <tr bgcolor="#222222" class="auto-style">
+                    <th class="col-lg-8">File Name</th>
+                    <th class="t, col-lg-2">DOWNLOAD</th>
+                    <th class="t, col-lg-2">DELETE</th>
+                </tr>
+            </thead>
+            @foreach (FileModel file in Model)
+            {
+                <tr>
+                    @*
+                        Default >> @Html.DisplayFor(modelItem => file.FileName)
+                    *@
 
-        </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-
-
-
-
-        </tbody>
-
-
-
-
-
-    </table>
-
+                    <td>@file.FileName</td>
+                    <td>
+                        <button>
+                            @Html.ActionLink("Download", "DownloadFile",
+                             new { fileName = file.FileName })
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            @Html.ActionLink("DELETE", "DeleteFile",
+                           new { fileName = file.FileName },
+                           new { onclick = "return confirm('Are you sure you wish to delete this?');" })
+                        </button>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
 </div>
-
 
 
